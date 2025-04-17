@@ -99,6 +99,27 @@
       color: #999;
     }
 
+    .back-button {
+    display: block;
+    margin: 50px auto 30px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: 2px solid #aaa;
+    border-radius: 30px;
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+    width: 150px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .back-button:hover {
+  background-color: #ddd;
+  border-color: #888;
+  color: #000;
+}
+
     @keyframes fadeInUp {
       0% {
         opacity: 0;
@@ -181,6 +202,7 @@
     </ul>
   </div>
 </section>
-<a href="https://yejilee0307.github.io/thirdpage/thirdpage.html" class="back-link">← Return</a>
+    <!-- 뒤로가기 버튼 -->
+  <button class="back-button" onclick="history.back()">← Go Back</button>
 </body>
 </html>
