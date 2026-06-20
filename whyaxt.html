@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <title>Brand Experience</title>
@@ -14,8 +15,8 @@
     }
 
     .intro {
-      padding: 60px 30px;
-      max-width: 800px;
+      padding: 60px 30px 40px;
+      max-width: 850px;
       margin: 0 auto;
       text-align: left;
       opacity: 0;
@@ -30,7 +31,7 @@
     }
 
     .intro p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #444;
       line-height: 1.8;
     }
@@ -49,54 +50,159 @@
       animation-delay: 0.3s;
     }
 
-    .roadmap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      padding: 40px 30px 60px;
+    .experience-section {
       max-width: 1100px;
       margin: 0 auto;
+      padding: 40px 30px 30px;
       opacity: 0;
       transform: translateY(50px);
       animation: fadeInUp 1s ease-out forwards;
       animation-delay: 0.5s;
     }
 
-    .year-box {
+    .project-card {
       background-color: #ffffff;
       border: 2px solid #aaa;
-      border-radius: 12px;
-      padding: 20px;
-      width: 230px;
-      text-align: center;
+      border-radius: 18px;
+      padding: 30px;
+      margin-bottom: 40px;
       box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-      position: relative;
     }
 
-    .year-box h3 {
-      margin-bottom: 12px;
-      color: #333;
-      font-size: 1.1rem;
+    .project-header {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
     }
 
-    .year-box ul {
-      list-style: none;
-      padding: 0;
+    .project-image {
+      flex: 1 1 300px;
+      height: 230px;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 2px solid #bbb;
+      background-color: #f4f1ea;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .project-text {
+      flex: 1.4 1 380px;
+    }
+
+    .project-text h3 {
+      font-size: 1.6rem;
+      color: #222;
+      margin: 0 0 15px;
+    }
+
+    .project-text p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.8;
       margin: 0;
-      font-size: 0.96rem;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .detail-card {
+      background-color: #f8f6f0;
+      border: 1.8px solid #b7b2a8;
+      border-radius: 14px;
+      padding: 20px;
+      min-height: 210px;
+      transition: all 0.3s ease;
+    }
+
+    .detail-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.12);
+    }
+
+    .detail-card h4 {
+      font-size: 1.05rem;
+      color: #333;
+      margin: 0 0 12px;
+    }
+
+    .detail-card p {
+      font-size: 0.95rem;
       color: #666;
-      line-height: 1.6;
+      line-height: 1.7;
+      margin: 0 0 14px;
     }
 
-    .year-box ul li {
-      margin-bottom: 8px;
+    .detail-image {
+      width: 100%;
+      height: 280px;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: #e7e2d7;
+      border: 1.5px dashed #aaa;
+      margin-top: 15px;
     }
 
-    .arrow {
-      font-size: 2rem;
-      color: #999;
+    .detail-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .website-embed {
+  width: 100%;
+  height: 280px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #e7e2d7;
+  border: 1.5px solid #aaa;
+  margin-top: 15px;
+}
+
+  .website-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+  .website-link {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 7px 14px;
+  border: 1.5px solid #aaa;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #333;
+  text-decoration: none;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+  .website-link:hover {
+  background-color: #ddd;
+  border-color: #888;
+  color: #000;
+}
+    .tag {
+      display: inline-block;
+      padding: 5px 10px;
+      border: 1px solid #aaa;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      color: #555;
+      background-color: #fff;
+      margin-bottom: 10px;
     }
 
     .back-button {
@@ -131,6 +237,24 @@
         transform: translateY(0);
       }
     }
+
+    @media (max-width: 768px) {
+      .intro h2 {
+        font-size: 2rem;
+      }
+
+      .future-title {
+        font-size: 1.6rem;
+      }
+
+      .project-card {
+        padding: 22px;
+      }
+
+      .project-image {
+        height: 200px;
+      }
+    }
   </style>
 </head>
 
@@ -138,84 +262,161 @@
 
   <!-- Intro -->
   <section class="intro">
-    <h2>Brand Experience</h2>
+    <h2>Experience in Action</h2>
     <p>
-      I am drawn to the way a brand can be felt before it is fully understood.<br><br>
-      Through visuals, space, objects, and atmosphere, a brand speaks to people and leaves a lasting impression.<br><br>
-      That is why I am interested in BX and VMD — fields that shape not only how a brand looks,
-      but how it is experienced, remembered, and emotionally connected to everyday life.<br><br>
-      I want to design experiences where identity becomes visible,
-      where space becomes storytelling,
-      and where people can naturally encounter the values of a brand.<br><br>
-      For me, brand design is not only about making things beautiful.
-      It is about building a coherent world that people can enter, feel, and relate to. <br><br>
-
-       저는 브랜드가 설명되기 전에 먼저 느껴질 수 있다는 부분이 끌렸습니다.
-        시각, 공간, 오브제, 그리고 분위기를 통해
-        브랜드는 사람들에게 말을 걸고
-        하나의 인상과 기억으로 남습니다.
-        그래서 저는 BX와 VMD에 관심을 갖게 되었습니다.
-        이 분야는 단순히 브랜드가 어떻게 보이는지를 넘어서
-        브랜드가 어떻게 경험되고 기억되며
-        사람들의 일상과 감정 속에 스며드는지를 만들어낸다고 생각합니다.
-        브랜드의 정체성이 눈에 보이고 공간이 하나의 이야기로 풀어나가며
-        사람들이 자연스럽게 브랜드의 가치와 마주할 수 있는
-        경험을 디자인하고 싶습니다.
-        나에게 브랜드 디자인이란
-        단순히 아름다운 결과물을 만드는 것에서 나아가
-        사람들이 느끼고 공감할 수 있는
-        하나의 세계를 만들어가는 일이라는 생각을 가지고 있습니다.
+      Brand Experience is where visual identity, content, space, and community meet.
+      I am interested in how a brand can be experienced beyond a single image — through campaigns,
+      offline moments, digital touchpoints, and the emotions people remember after encountering it.
+      <br><br>
+      Through Sogang Ribbon and Student Council projects, I have practiced planning and operating
+      brand/community experiences in real contexts. These experiences helped me understand how ideas
+      become touchpoints, how touchpoints build participation, and how participation turns into a stronger brand memory.
+      <br><br>
+      브랜드 경험은 단순히 보기 좋은 이미지를 만드는 일이 아니라,
+      사람들이 브랜드를 만나고, 기억하고, 다시 참여하게 만드는 흐름을 설계하는 일이라고 생각합니다.
+      서강리본과 학생회 활동을 통해 콘텐츠, 협업, 이벤트, 커뮤니케이션이 하나의 경험으로 연결되는 과정을 직접 기획하고 운영했습니다.
     </p>
   </section>
 
   <!-- Subtitle -->
   <div class="future-title">
-    Direction & Vision
+    Details
   </div>
 
-  <!-- Roadmap -->
-  <section class="roadmap">
-    <div class="year-box">
-      <h3>Visual Sensibility</h3>
-      <ul>
-        <li>Developing a visual language through design practice</li>
-        <li>Exploring composition, typography, and mood</li>
-        <li>Building sensitivity to image and storytelling</li>
-      </ul>
-    </div>
+  <!-- Experience Section -->
+  <class="experience-section">
 
-    <div class="arrow">→</div>
+    <!-- Sogang Ribbon -->
+    <article class="project-card">
+      <div class="project-header">
+        <div class="project-image">
+          <!-- 대표 이미지 넣기 -->
+          <img src="images/sogang_ribbon.jpg" alt="Sogang Ribbon project image">
+        </div>
 
-    <div class="year-box">
-      <h3>Brand Identity</h3>
-      <ul>
-        <li>Understanding how brands communicate values</li>
-        <li>Designing consistent identity across touchpoints</li>
-        <li>Connecting graphics, narrative, and audience experience</li>
-      </ul>
-    </div>
+        <div class="project-text">
+          <span class="tag">Brand Collaboration · Content · Digital Touchpoint</span>
+          <h3>서강리본 Sogang Ribbon</h3>
+          <p>
+            서강리본은 학교 주변 로컬 브랜드와 학생 커뮤니티를 연결하는 콘텐츠 기반 프로젝트입니다.
+            브랜드의 매력을 학생들의 언어로 재해석하고, 협업 콘텐츠와 참여형 이벤트를 통해
+            로컬 브랜드가 더 자연스럽게 발견될 수 있는 접점을 만들었습니다.
+          </p>
+        </div>
+      </div>
 
-    <div class="arrow">→</div>
+      <div class="detail-grid">
+        <div class="detail-card">
+          <span class="tag">Local Brand Collaboration</span>
+          <h4>로컬 브랜드 협업</h4>
+          <p>
+            브랜드의 핵심 매력, 공간 분위기, 대표 제품을 분석해 콘텐츠 방향을 설정했습니다.
+            단순 소개가 아니라 방문 이유와 CTA가 드러나는 협업 콘텐츠를 기획해
+            학생들이 브랜드를 실제로 경험하도록 연결했습니다.
+          </p>
+          <div class="detail-image">
+            <img src="images/ribbon-collaboration1.png" alt="Local brand collaboration image">
+          </div>
+          <div class="detail-image">
+            <img src="images/ribbon-collaboration2.png" alt="Local brand collaboration image">
+          </div>
+        </div>
 
-    <div class="year-box">
-      <h3>Space & Display</h3>
-      <ul>
-        <li>Expanding interest into spatial experience and VMD</li>
-        <li>Thinking about how products and environments interact</li>
-        <li>Creating immersive and memorable brand moments</li>
-      </ul>
-    </div>
+        <div class="detail-card">
+          <span class="tag">Participation Campaign</span>
+          <h4>리본 어워드 개최</h4>
+          <p>
+            학생들이 직접 참여할 수 있는 어워드 형식의 콘텐츠를 기획했습니다.
+            후보 선정, 투표 유도, 결과 발표까지 하나의 캠페인 흐름으로 구성해
+            커뮤니티 참여와 브랜드 노출을 동시에 강화했습니다.
+          </p>
+          <div class="detail-image">
+            <img src="images/instagram-content.png" alt="Ribbon Awards image">
+          </div>
+        </div>
 
-    <div class="arrow">→</div>
+        <div class="detail-card">
+          <span class="tag">Instagram Content</span>
+          <h4>인스타 콘텐츠 운영</h4>
+          <p>
+            주 2회 업로드를 기준으로 카드뉴스, 릴스, 스토리형 콘텐츠를 운영했습니다.
+            브랜드별 톤앤매너를 유지하면서도 학생들이 쉽게 반응할 수 있는 문장과 이미지 구성을 고민했습니다.
+          </p>
+          <div class="detail-image">
+            <img src="images/sogang-ribbon-main.png" alt="Instagram content image">
+          </div>
+        </div>
 
-    <div class="year-box">
-      <h3>Future Goal</h3>
-      <ul>
-        <li>To grow as a BX / VMD designer</li>
-        <li>To create meaningful brand experiences</li>
-        <li>To connect visual design, space, and emotion</li>
-      </ul>
-    </div>
+        <div class="detail-card">
+          <span class="tag">Website Launch</span>
+          <h4>웹사이트 개설</h4>
+          <p>
+            흩어진 콘텐츠를 아카이빙하고 협업 브랜드를 더 명확하게 보여주기 위해 웹사이트를 개설했습니다.
+            브랜드 소개, 콘텐츠 기록, 프로젝트 흐름을 한 번에 확인할 수 있는 디지털 거점으로 설계했습니다.
+          </p>
+          <div class="website-embed">
+            <div class="detail-image">
+            <img src="images/website.png" alt="Instagram content image">
+            </div>
+          </div>
+
+          <a 
+            class="website-link" 
+            href="https://www.sogang-ribbon.site" 
+            target="_blank">
+            Visit Website →
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Student Council -->
+    <article class="project-card">
+      <div class="project-header">
+        <div class="project-image">
+          <!-- 대표 이미지 넣기 -->
+          <img src="images/student_council2.png" alt="Student Council project image">
+        </div>
+
+        <div class="project-text">
+          <span class="tag">Community Experience · Planning · Communication</span>
+          <h3>학생회 Student Council</h3>
+          <p>
+            학생회 활동은 하나의 커뮤니티 경험을 설계하고 운영하는 과정이었습니다.
+            행사의 콘셉트와 현장 운영, 학생들의 참여 동선, 학교 및 교수진과의 커뮤니케이션까지
+            다양한 이해관계자를 연결하며 실제 커뮤니티 경험을 만들어갔습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="detail-grid">
+        <div class="detail-card">
+          <span class="tag">Community Event Planning</span>
+          <h4>Community Event Planning</h4>
+          <p>
+            단과대 MT, 야식대, 종강총회 등 학생들이 직접 참여하는 행사를 기획하고 운영했습니다.
+            행사 목적, 홍보 방식, 현장 동선, 참여 경험을 함께 고려하며
+            커뮤니티의 소속감이 느껴지는 오프라인 접점을 만들었습니다.
+          </p>
+          <div class="detail-image">
+            <img src="images/student_council3.png" alt="Community event planning image">
+          </div>
+        </div>
+
+        <div class="detail-card">
+          <span class="tag">Stakeholder Communication</span>
+          <h4>Stakeholder Communication</h4>
+          <p>
+            학생, 학교, 교수진 등 여러 이해관계자 사이에서 의견을 조율하고 공지와 피드백을 관리했습니다.
+            단순 전달을 넘어 각 주체의 입장을 이해하고 신뢰를 형성하는 커뮤니케이션을 경험했습니다.
+          </p>
+          <div class="detail-image">
+            <img src="images/student_council4.png" alt="Stakeholder communication image">
+          </div>
+        </div>
+      </div>
+    </article>
+
   </section>
 
   <!-- Back Button -->
@@ -227,3 +428,4 @@
 
 </body>
 </html>
+
